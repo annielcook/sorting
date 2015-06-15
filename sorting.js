@@ -86,9 +86,14 @@ function split(arr){
 }
 
 
+function halve(arr){
+	var middle = arr.length/2;
+	var right = arr;
+	var left = right.splice(0, middle);
+	return [left, right];
+}
+
 function mergeSort (arr) {
-// recursively call split until ret_arr[0].length = 1
-	//ultimately we want an array of arrays of length 1
 
 	if(arr.length <= 1){
 		return arr;
